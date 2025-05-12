@@ -12,6 +12,12 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "next": "^15.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@alfredots/commons-http-client": "*"
+  },
   "devDependencies": {
     "@types/node": "22.15.17",
     "@types/react": "19.1.4",

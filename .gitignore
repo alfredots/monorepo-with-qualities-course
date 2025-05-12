@@ -1,1 +1,4 @@
-node_modules
+/node_modules
+
+apps/company-front/.next/
+apps/company-front/_next/

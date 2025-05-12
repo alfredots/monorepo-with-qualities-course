@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "commons/*"
   ],
   "scripts": {
     "front": "npm exec --workspace=company-front",
@@ -22,10 +23,5 @@
     "url": "https://github.com/alfredots/monorepo-with-qualities-course/issues"
   },
   "homepage": "https://github.com/alfredots/monorepo-with-qualities-course#readme",
-  "description": "",
-  "dependencies": {
-    "next": "^15.3.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  }
+  "description": ""
 }

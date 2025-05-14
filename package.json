@@ -10,7 +10,10 @@
     "front": "npm exec --workspace=company-front",
     "dev:front": "npm run front -- npm run dev",
     "server": "npm exec --workspace=company-server",
-    "dev:server": "npm run server -- npm run dev"
+    "dev:server": "npm run server -- npm run dev",
+    "dev": "concurrently -c red,blue -n 'front','server' 'npm run dev:front' 'npm run dev:server'",
+    "generator": "npm exec --workspace=@alfredots/generator",
+    "gen": "npm run generator -- npm run gen"
   },
   "repository": {
     "type": "git",
@@ -23,5 +26,8 @@
     "url": "https://github.com/alfredots/monorepo-with-qualities-course/issues"
   },
   "homepage": "https://github.com/alfredots/monorepo-with-qualities-course#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }

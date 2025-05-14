@@ -2,3 +2,4 @@
 
 apps/company-front/.next/
 apps/company-front/_next/
+apps/company-server/node_modules

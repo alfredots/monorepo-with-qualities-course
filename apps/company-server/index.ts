@@ -1,7 +1,7 @@
 import http from "http";
 import { httpClient } from '@alfredots/commons-http-client'
 
-console.log('Teste!')
+console.warn('Teste!')
 
 http.createServer(async (_, res) => {
     const githubPayload = await httpClient.get("https://api.github.com/users/alfredots")

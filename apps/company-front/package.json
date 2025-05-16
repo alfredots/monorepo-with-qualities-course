@@ -6,21 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint './**/*.{jsx,tsx,js,ts}'",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@alfredots/commons-http-client": "*",
     "next": "^15.3.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "@alfredots/commons-http-client": "*"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@alfredots/commons-lint": "*",
+    "@alfredots/commons-test": "*",
     "@types/node": "22.15.17",
     "@types/react": "19.1.4",
-    "typescript": "5.8.3"
+    "typescript": "^5.8.3"
   }
 }

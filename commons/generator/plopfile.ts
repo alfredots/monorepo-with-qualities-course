@@ -30,6 +30,16 @@ function commonPackage(plop: NodePlopAPI) {
         type: "add",
         path: path.resolve(ROOT_MONOREPO, "commons", "{{ lowerCase packageName }}", "package.json"),
         templateFile: "templates/common-package/package.json.hbs"
+      },
+      {
+        type: "add",
+        path: path.resolve(ROOT_MONOREPO, "commons", "{{ lowerCase packageName }}", "eslint.config.mjs"),
+        templateFile: "templates/common-package/eslint.config.mjs.hbs"
+      },
+      {
+        type: "add",
+        path: path.resolve(ROOT_MONOREPO, "commons", "{{ lowerCase packageName }}", "jest.config.mjs"),
+        templateFile: "templates/common-package/jest.config.mjs.hbs"
       }
     ],
   })

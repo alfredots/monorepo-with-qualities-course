@@ -18,7 +18,13 @@
     "gen": "npm run generator -- npm run gen",
     "lint": "npm run lint --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{tsx, ts, jsx, js}": [
+      "npm run lint"
+    ]
   },
   "repository": {
     "type": "git",
@@ -34,6 +40,7 @@
   "description": "",
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0"
   }
 }

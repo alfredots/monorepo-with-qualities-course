@@ -7,5 +7,5 @@ export default function Page() {
     .get("https://api.github.com/users/alfredots")
     .then(data => console.warn(data))
 
-  return <h1>Hello, World!</h1>
+  return <h1>Hello, World 2!</h1>
 }

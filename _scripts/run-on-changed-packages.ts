@@ -1,13 +1,9 @@
 import { execSync } from 'child_process'
 import fs from 'fs'
 
-console.log('RUN ON CHANGED PACKAGES');
-
 const diffChangedFiles = execSync("git diff --name-only HEAD^..HEAD", {
   encoding: 'utf-8'
 }).split('\n')
-
-console.log(diffChangedFiles)
 
 const changedPackageNames = diffChangedFiles
   // Pegar os paths dos package JSONs
@@ -23,7 +19,6 @@ const changedPackageNames = diffChangedFiles
   .filter(Boolean)
   // Remoção dos duplicados
   .filter((pathToPackageJSON, index, arr) => {
-    console.log(pathToPackageJSON)
     return arr.indexOf(pathToPackageJSON) === index;
   })
   // Ler os arquivos do package.json e pegar o name dentro do package JSON
@@ -33,7 +28,7 @@ const changedPackageNames = diffChangedFiles
         encoding: "utf-8"
       }))
       const packageName = packageJSON.name;
-      
+
       return [
         ..._changedPackageNames,
         packageName
@@ -42,7 +37,6 @@ const changedPackageNames = diffChangedFiles
     return _changedPackageNames
   }, [] as string[])
 
-console.log(changedPackageNames)
 
 const workspacesFlags = changedPackageNames.map((packageName) => {
   return `--workspace=${packageName}`
